@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+.leadContentDiv {
+	min-height: 70vh;
+}
+
+.contentDiv {
+	border-radius: 1em;
+	border: 0.2em solid transparent;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	margin: 1.5em 1.5em 1.5em 1.5em;
+	min-height: 75vh;
+}

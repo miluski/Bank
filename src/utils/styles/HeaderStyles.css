@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,600;1,8..144,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.header {
+    display: flex;
+    justify-content: space-between;
+	flex-direction: row;
+    background-color: #F6F1E9 !important;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.bankText {
+	font-family: "Roboto Serif", serif;
+    color: #A14E1C;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    margin: 0 5em 0 0;
+    cursor: pointer;
+}
+
+.leftHeaderContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.loginButton {
+    background-color: #E4AB3B !important;
+    color: black !important;
+    align-self: center;
+    font-family: "Roboto", sans-serif;
+	font-weight: lighter;
+	font-style: normal;
+    font-size: 14px;
+}
+
+.loginButton:hover {
+    color: gray !important;
+}
+
+.registerButton {
+    background-color: #FFC920 !important;
+    color: black !important;
+    align-self: center;
+    font-family: "Roboto", sans-serif;
+	font-weight: lighter;
+	font-style: normal;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.registerButton:hover {
+    color: gray !important;
+}
+
+.welcomeText {
+    font-family: "Roboto";
+    font-weight: lighter;
+    font-size: 24px;
+}
