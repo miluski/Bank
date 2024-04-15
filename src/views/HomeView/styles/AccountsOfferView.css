@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+.leadContentDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.advertisementsDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.advertisementsTexts {
+    display: flex;
+    flex-direction: column;
+}
+
+.advertisementImage {
+    border-radius: 10px;
+}
+
+.accountsOfferText {
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.advertismentText {
+
+}

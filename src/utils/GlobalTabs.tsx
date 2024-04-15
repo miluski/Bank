@@ -1,8 +1,9 @@
 import { ConfigProvider, Tabs } from "antd";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { CHANGE_SITE } from "./ActionTypes";
 import "./styles/TabsStyles.css";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
+import { State } from "./State";
 
 const globalTabItems = [
 	{
@@ -22,27 +23,31 @@ const globalTabItems = [
 const dashboardTabItems = [
 	{
 		label: "Moje konto",
-		key: "my-account"
+		key: "my-account",
 	},
 	{
 		label: "Historia",
-		key: "history"
+		key: "history",
 	},
 	{
 		label: "Oszczędności",
-		key: "savings"
+		key: "savings",
 	},
 	{
 		label: "Ustawienia",
-		key: "settings"
-	}
-]
+		key: "settings",
+	},
+];
 
 export default function GlobalTabs() {
 	const dispatch = useDispatch();
 	const location = useLocation();
+	const navigate = useNavigate();
+	const { site } = useSelector((state: State) => state);
 	const path = location.pathname;
 	const tabItems = path === "/dashboard" ? dashboardTabItems : globalTabItems;
+	const defaultActiveKey =
+		path !== "/login" && path !== "/open-account" ? site : "empty";
 	return (
 		<ConfigProvider
 			theme={{
@@ -58,10 +63,11 @@ export default function GlobalTabs() {
 			}}>
 			<Tabs
 				className='tabs'
-				defaultActiveKey='empty'
+				defaultActiveKey={defaultActiveKey}
 				items={tabItems}
 				onChange={(actualKey: string) => {
 					dispatch({ type: CHANGE_SITE, newSite: actualKey });
+					path !== "/dashboard" ? navigate("/") : null;
 				}}
 			/>
 		</ConfigProvider>

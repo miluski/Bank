@@ -1,6 +1,7 @@
 import { Layout } from 'antd';
 import HeaderView from '../../utils/Header';
 import FooterView from '../../utils/Footer';
+import "./styles/DashboardStyles.css";
 
 const { Content } = Layout;
 
