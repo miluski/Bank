@@ -1,0 +1,18 @@
+.mainTilesDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-height: 25%;
+    margin: -15% 5% 0% 5%;
+}
+
+.singleTile {
+    min-width: 20vh;
+    min-height: 20vh;
+    max-width: 20vh;
+    max-height: 20vh;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}

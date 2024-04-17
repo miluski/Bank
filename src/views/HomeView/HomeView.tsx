@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { State } from "../../utils/State";
 import "./styles/HomeViewStyles.css";
 import "./styles/AccountsOfferView.css";
+import AccountsTiles from "./AccountsTiles";
 
 const { Content } = Layout;
 
@@ -17,7 +18,14 @@ export default function HomeView() {
 			<Content>
 				<div className='leadContentDiv'>
 					<div className='contentDiv'>
-						{site === "accounts" ? <AccountsOfferView /> : <></>}
+						{site === "accounts" ? (
+							<div style={{ display: "flex", flexDirection: "column" }}>
+								<AccountsOfferView />
+								<AccountsTiles />
+							</div>
+						) : (
+							<></>
+						)}
 					</div>
 				</div>
 			</Content>

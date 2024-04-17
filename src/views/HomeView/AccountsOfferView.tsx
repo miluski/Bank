@@ -14,7 +14,7 @@ export default function AccountsOfferView() {
 				<Image
 					width={475}
                     height={253}
-					src='https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'
+					src='https://www.bspilzno.pl/wp-content/uploads/2022/11/ubezpieczenia-tur.jpeg.webp'
                     preview={false}
                     className="advertisementImage"
 				/>
