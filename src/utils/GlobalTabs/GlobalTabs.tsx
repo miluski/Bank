@@ -12,7 +12,7 @@ const globalTabItems = [
 	},
 	{
 		label: "Lokaty",
-		key: "loans",
+		key: "deposits",
 	},
 	{
 		label: "",
@@ -48,6 +48,12 @@ export default function GlobalTabs() {
 	const tabItems = path === "/dashboard" ? dashboardTabItems : globalTabItems;
 	let defaultActiveKey =
 		path !== "/login" && path !== "/open-account" ? site : "empty";
+	defaultActiveKey =
+		defaultActiveKey === "singleAccountOffer"
+			? "accounts"
+			: defaultActiveKey === "singleDepositOffer"
+			? "deposits"
+			: defaultActiveKey;
 	return (
 		<ConfigProvider
 			theme={{
