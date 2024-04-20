@@ -40,19 +40,3 @@
 	align-self: center;
 	margin-top: 2%;
 }
-
-.title {
-	font-family: "Roboto";
-	font-weight: 700;
-    font-size: 18px;
-    align-self: center;
-    margin-top: 5%;
-}
-
-.description {
-    font-family: "Roboto Slab";
-    font-weight: 300;
-    font-size: 18px;
-    margin: 5%;
-    align-self: center;
-}

@@ -1,7 +1,4 @@
-import { Tile } from "./Tile";
-import "./styles/AccountTilesStyles.css";
-
-const tilesData = [
+export const accountOfferTiles = [
 	{
 		title: "Konto dla młodych",
 		description: "Wsparcie w zarządzaniu środkami osobistymi",
@@ -24,19 +21,3 @@ const tilesData = [
 		bgColor: "#C49C73",
 	},
 ];
-
-export default function AccountsTiles() {
-	return (
-		<div className="mainTilesDiv">
-			{tilesData.map((tile: Tile, index: number) => (
-				<div
-					className='singleTile'
-					key={index}
-					style={{ backgroundColor: tile.bgColor }}>
-                        <text className="title">{tile.title}</text>
-                        <text className="description">{tile.description}</text>
-                    </div>
-			))}
-		</div>
-	);
-}

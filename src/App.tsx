@@ -16,7 +16,6 @@ function App() {
 		key: "root",
 		storage,
 	};
-
 	const persistedReducer = persistReducer(persistConfig, reducer);
 	const store = legacy_createStore(persistedReducer);
 	const persistor = persistStore(store);

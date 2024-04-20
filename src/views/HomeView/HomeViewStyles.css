@@ -8,5 +8,10 @@
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	margin: 1.5em 1.5em 1.5em 1.5em;
 	min-height: 75vh;
-	background-color: #FAF6F2;
+	background-color: #faf6f2;
+}
+
+.offerDiv {
+	display: "flex";
+	flex-direction: "column";
 }

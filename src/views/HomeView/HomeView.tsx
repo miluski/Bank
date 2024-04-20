@@ -1,12 +1,11 @@
 import { Layout } from "antd";
-import HeaderView from "../../utils/Header";
-import FooterView from "../../utils/Footer";
-import AccountsOfferView from "./AccountsOfferView";
+import "./HomeViewStyles.css";
 import { useSelector } from "react-redux";
 import { State } from "../../utils/State";
-import "./styles/HomeViewStyles.css";
-import "./styles/AccountsOfferView.css";
-import AccountsTiles from "./AccountsTiles";
+import HeaderView from "../../utils/Header/Header";
+import FooterView from "../../utils/Footer/Footer";
+import AccountOfferView from "./AccountOfferView/AccountOfferView";
+import DepositOfferView from "./DepositOfferView/DepositOfferView";
 
 const { Content } = Layout;
 
@@ -19,12 +18,9 @@ export default function HomeView() {
 				<div className='leadContentDiv'>
 					<div className='contentDiv'>
 						{site === "accounts" ? (
-							<div style={{ display: "flex", flexDirection: "column" }}>
-								<AccountsOfferView />
-								<AccountsTiles />
-							</div>
+							<AccountOfferView />
 						) : (
-							<></>
+							<DepositOfferView />
 						)}
 					</div>
 				</div>

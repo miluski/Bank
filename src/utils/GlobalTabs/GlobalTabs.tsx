@@ -1,9 +1,9 @@
 import { ConfigProvider, Tabs } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { CHANGE_SITE } from "./ActionTypes";
+import { CHANGE_SITE } from "../ActionTypes";
 import "./styles/TabsStyles.css";
 import { useLocation, useNavigate } from "react-router";
-import { State } from "./State";
+import { State } from "../State";
 
 const globalTabItems = [
 	{
@@ -46,7 +46,7 @@ export default function GlobalTabs() {
 	const { site } = useSelector((state: State) => state);
 	const path = location.pathname;
 	const tabItems = path === "/dashboard" ? dashboardTabItems : globalTabItems;
-	const defaultActiveKey =
+	let defaultActiveKey =
 		path !== "/login" && path !== "/open-account" ? site : "empty";
 	return (
 		<ConfigProvider
@@ -63,7 +63,7 @@ export default function GlobalTabs() {
 			}}>
 			<Tabs
 				className='tabs'
-				defaultActiveKey={defaultActiveKey}
+				activeKey={defaultActiveKey}
 				items={tabItems}
 				onChange={(actualKey: string) => {
 					dispatch({ type: CHANGE_SITE, newSite: actualKey });

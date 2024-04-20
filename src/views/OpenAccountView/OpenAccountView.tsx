@@ -1,6 +1,6 @@
 import { Layout } from 'antd';
-import HeaderView from '../../utils/Header';
-import FooterView from '../../utils/Footer';
+import HeaderView from '../../utils/Header/Header';
+import FooterView from '../../utils/Footer/Footer';
 import "./styles/OpenAccountViewStyles.css";
 
 const { Content } = Layout;
