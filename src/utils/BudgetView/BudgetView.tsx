@@ -3,8 +3,10 @@ import { Tile } from "./Tile";
 import { Button } from "antd";
 import { useSelector } from "react-redux";
 import "./styles/BudgetViewStyles.css";
+import { useNavigate } from "react-router";
 
 export default function BudgetView(props: { tiles: Tile[] }) {
+	const navigate = useNavigate();
 	const { site } = useSelector((state: State) => state);
 	const buttonText =
 		site === "my-account"
@@ -45,7 +47,12 @@ export default function BudgetView(props: { tiles: Tile[] }) {
 			<Button
 				className='budgetOperationButton'
 				style={{ backgroundColor: buttonColor }}
-                type="primary">
+				type='primary'
+				onClick={() => {
+					site === "my-account"
+						? navigate("/send-transfer")
+						: navigate("/create-deposit");
+				}}>
 				{buttonText}
 			</Button>
 		</div>

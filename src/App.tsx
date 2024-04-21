@@ -10,6 +10,7 @@ import Dashboard from "./views/Dashboard/Dashboard";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { PersistGate } from "redux-persist/integration/react";
+import SendingTransferView from "./views/SendingTransferView/SendingTransferView";
 
 function App() {
 	const persistConfig = {
@@ -28,6 +29,8 @@ function App() {
 						<Route path='/login' element={<LoginView />} />
 						<Route path='/open-account' element={<OpenAccountView />} />
 						<Route path='/dashboard' element={<Dashboard />} />
+						<Route path='/send-transfer' element={<SendingTransferView />} />
+						<Route path='/create-deposit' element={<></>} />
 					</Routes>
 				</BrowserRouter>
 			</PersistGate>

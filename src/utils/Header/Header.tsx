@@ -15,8 +15,7 @@ export default function HeaderView() {
 	const location = useLocation();
 	const currentPath = location.pathname;
 	const { site } = useSelector((state: State) => state);
-	useEffect(() => {
-	}, [site]);
+	useEffect(() => {}, [site]);
 	return (
 		<Header className='header'>
 			<div className='leftHeaderContent'>
@@ -31,7 +30,10 @@ export default function HeaderView() {
 				<GlobalTabs />
 			</div>
 			<div>
-				{currentPath !== "/login" && currentPath != "/dashboard" ? (
+				{currentPath !== "/login" &&
+				currentPath != "/dashboard" &&
+				currentPath != "/send-transfer" &&
+				currentPath != "/create-deposit" ? (
 					<Button
 						type='primary'
 						className='loginHeaderButton'
@@ -44,7 +46,10 @@ export default function HeaderView() {
 				) : (
 					<></>
 				)}
-				{currentPath !== "/open-account" && currentPath != "/dashboard" ? (
+				{currentPath !== "/login" &&
+				currentPath != "/dashboard" &&
+				currentPath != "/send-transfer" &&
+				currentPath != "/create-deposit" ? (
 					<Button
 						type='primary'
 						className='registerButton'
@@ -57,7 +62,9 @@ export default function HeaderView() {
 				) : (
 					<></>
 				)}
-				{currentPath === "/dashboard" ? (
+				{currentPath === "/dashboard" ||
+				currentPath === "/dashboard" ||
+				currentPath === "/send-transfer" ? (
 					<text className='welcomeText'>Witaj, XYZ!</text>
 				) : (
 					<></>

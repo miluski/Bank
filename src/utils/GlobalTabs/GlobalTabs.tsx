@@ -45,7 +45,12 @@ export default function GlobalTabs() {
 	const location = useLocation();
 	const { site } = useSelector((state: State) => state);
 	const path = location.pathname;
-	const tabItems = path === "/dashboard" ? dashboardTabItems : globalTabItems;
+	const tabItems =
+		path === "/dashboard" ||
+		path === "/send-transfer" ||
+		path === "/create-deposit"
+			? dashboardTabItems
+			: globalTabItems;
 	let defaultActiveKey =
 		path !== "/login" && path !== "/open-account" ? site : "empty";
 	defaultActiveKey =
@@ -73,7 +78,11 @@ export default function GlobalTabs() {
 				items={tabItems}
 				onChange={(actualKey: string) => {
 					dispatch({ type: CHANGE_SITE, newSite: actualKey });
-					path !== "/dashboard" ? navigate("/") : null;
+					path === "/dashboard"
+						? null
+						: path === "/send-transfer" || path === "/create-deposit"
+						? navigate("/dashboard")
+						: navigate("/");
 				}}
 			/>
 		</ConfigProvider>
