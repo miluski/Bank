@@ -7,6 +7,7 @@ import { State } from "../../utils/State";
 import BudgetView from "../../utils/BudgetView/BudgetView";
 import { accountsData } from "./AccountsData";
 import { depositsData } from "./DepositsData";
+import HistoryView from "./HistoryView";
 
 const { Content } = Layout;
 
@@ -21,7 +22,7 @@ export default function Dashboard() {
 						{site === "my-account" ? (
 							<BudgetView tiles={accountsData} />
 						) : site === "history" ? (
-							<></>
+							<HistoryView />
 						) : site === "savings" ? (
 							<BudgetView tiles={depositsData} />
 						) : site === "settings" ? (

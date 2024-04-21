@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .leadContentDiv {
 	min-height: 70vh;
@@ -10,4 +11,19 @@
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	margin: 1.5em 1.5em 1.5em 1.5em;
 	min-height: 75vh;
+}
+
+.table td {
+	text-align: center;
+	font-family: "Roboto";
+	font-size: 32px;
+	border-color: black !important;
+	color: gray;
+}
+
+.ant-table-cell {
+	text-align: center !important;
+	border-color: black !important;
+	font-family: "Roboto";
+	font-size: 32px;
 }
