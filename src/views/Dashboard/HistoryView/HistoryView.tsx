@@ -1,6 +1,5 @@
 import { ConfigProvider, Table } from "antd";
 import { transactionsData } from "./transactionsData";
-import "./styles/DashboardStyles.css";
 
 const columns = [
 	{

@@ -5,9 +5,10 @@ import "./styles/DashboardStyles.css";
 import { useSelector } from "react-redux";
 import { State } from "../../utils/State";
 import BudgetView from "../../utils/BudgetView/BudgetView";
-import { accountsData } from "./AccountsData";
-import { depositsData } from "./DepositsData";
-import HistoryView from "./HistoryView";
+import { accountsData } from "./MyAccountView/AccountsData";
+import { depositsData } from "./SavingsView/DepositsData";
+import HistoryView from "./HistoryView/HistoryView";
+import SettingsView from "./SettingsView/SettingsView";
 
 const { Content } = Layout;
 
@@ -26,7 +27,7 @@ export default function Dashboard() {
 						) : site === "savings" ? (
 							<BudgetView tiles={depositsData} />
 						) : site === "settings" ? (
-							<></>
+							<SettingsView />
 						) : (
 							<></>
 						)}
