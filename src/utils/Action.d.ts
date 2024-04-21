@@ -10,4 +10,6 @@ export type Action = {
     newMinimumAmount: number;
     newMaximumAmount: number;
     newScale: string;
+    newCurrentRegisterPage: string;
+    newSelectedAccountTypeIndex: number;
 };

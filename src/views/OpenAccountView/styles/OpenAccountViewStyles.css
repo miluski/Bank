@@ -1,13 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-.leadContentDiv {
+.leadRegisterContentDiv {
 	min-height: 70vh;
+	align-items: center;
+	justify-content: center;
 }
 
-.contentDiv {
+.registerContentDiv {
+	position: relative;
 	border-radius: 1em;
 	border: 0.2em solid transparent;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	margin: 1.5em 1.5em 1.5em 1.5em;
 	min-height: 75vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.registerContentDiv::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://i.pinimg.com/564x/c1/54/e9/c154e95da7089ca067ec5271b700dbc3.jpg');
+	background-size: cover;
+	background-position: center;
+	opacity: 0.4;
+}
+
+.registerFormDiv {
+	border-radius: 1em;
+	border: 0.2em solid transparent;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	margin: 1.5em 1.5em 1.5em 1.5em;
+	min-height: 60vh;
+	min-width: 100vh;
+	background-color: #F6F1E9; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 1;
+}
+
+.nextButton {
+    background-color: #FFC920 !important;
+    color: black !important;
+    align-self: center;
+    font-family: "Roboto";
+	font-weight: 300;
+	font-style: normal;
+    font-size: 14px;
+	margin: 0% 0% 5% 0%;
+	min-width: 20vh;
+}
+
+.loginButton:hover {
+    color: gray !important;
+}
+
+.loginText {
+	font-family: "Roboto Flex";
+	font-size: 42px;
+	font-weight: 600;
+	margin: 5%;
+}
+
+.formItem .ant-form-item-label > label {
+	font-family: 'Roboto';
+	font-weight: 300; 
+	font-size: 20px; 
+}
+
+.formItem .ant-form-item-label {
+	width: 300px; 
+}
+
+.formItem .ant-input {
+	width: 300px; 
+}
+
+.myLine {
+	border: none;
+	border-top: 1px solid #333; 
+	width: 100%; 
+	margin-top: 5%;
+}
+
+.mainTilesDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50vh;
+}
+
+.singleTile {
+    min-width: 20vh;
+    min-height: 20vh;
+    max-width: 20vh;
+    max-height: 20vh;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	margin: 2%;
+}
+
+.formChooseItem {
+	font-family: 'Roboto';
+	font-weight: 400; 
+	font-size: 24px; 
+	width: 300px; 
+	margin-top: -35%;
 }

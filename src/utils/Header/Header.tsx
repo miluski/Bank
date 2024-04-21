@@ -35,7 +35,7 @@ export default function HeaderView() {
 				{currentPath !== "/login" && currentPath != "/dashboard" ? (
 					<Button
 						type='primary'
-						className='loginButton'
+						className='loginHeaderButton'
 						onClick={() => {
 							dispatch({ type: CHANGE_SITE, newSite: "login" });
 							navigate("/login");

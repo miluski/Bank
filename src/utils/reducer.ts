@@ -1,7 +1,9 @@
 import { Action } from "./Action";
 import {
 	CHANGE_ACCOUNT_OFFER_FIELDS,
+	CHANGE_CURRENT_REGISTER_PAGE,
 	CHANGE_DEPOSIT_OFFER_FIELDS,
+	CHANGE_SELECTED_ACCOUNT_TYPE,
 	CHANGE_SITE,
 } from "./ActionTypes";
 
@@ -17,6 +19,8 @@ const initialState = {
 	minimumAmount: 0,
 	maximumAmount: 0,
 	scale: "",
+	currentRegisterPage: "start",
+	selectedAccountTypeIndex: 0,
 };
 
 export function reducer(state = initialState, action: Action) {
@@ -43,6 +47,16 @@ export function reducer(state = initialState, action: Action) {
 				maximumAmount: action.newMaximumAmount,
 				scale: action.newScale,
 				site: action.newSite,
+			};
+		case CHANGE_CURRENT_REGISTER_PAGE:
+			return {
+				...state,
+				currentRegisterPage: action.newCurrentRegisterPage,
+			};
+		case CHANGE_SELECTED_ACCOUNT_TYPE:
+			return {
+				...state,
+				selectedAccountTypeIndex: action.newSelectedAccountTypeIndex,
 			};
 		default:
 			return state;

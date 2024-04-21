@@ -5,10 +5,12 @@ import { useSelector } from "react-redux";
 import { State } from "../State";
 import { Button } from "antd";
 import "./styles/SingleDepositOfferView.css";
+import { useNavigate } from "react-router";
 
 export default function SingleDepositOfferView() {
 	const { productType, percent, minimumAmount, maximumAmount, scale } =
 		useSelector((state: State) => state);
+	const navigate = useNavigate();
 	return (
 		<div className='mainDiv'>
 			<text className='depositTypeText'>{productType}</text>
@@ -38,7 +40,13 @@ export default function SingleDepositOfferView() {
 						</text>
 					</div>
 				</div>
-				<Button className='goFurtherButton'>Otwórz lokatę {"->"}</Button>
+				<Button
+					className='goFurtherButton'
+					onClick={() => {
+						navigate("/login");
+					}}>
+					Otwórz lokatę {"->"}
+				</Button>
 			</div>
 		</div>
 	);

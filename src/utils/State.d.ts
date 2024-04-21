@@ -9,4 +9,6 @@ export type State = {
     minimumAmount: number;
     maximumAmount: number;
     scale: string;
+    currentRegisterPage: string;
+    selectedAccountTypeIndex: number;
 }

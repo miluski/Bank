@@ -1,4 +1,4 @@
 export type InformationTexts = {
 	headerText: string;
-	informationTextsArray: Array<String>;
+	informationTextsArray: Array<string>;
 };

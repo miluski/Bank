@@ -23,7 +23,7 @@
     flex-direction: row;
 }
 
-.loginButton {
+.loginHeaderButton {
     background-color: #E4AB3B !important;
     color: black !important;
     align-self: center;
@@ -33,7 +33,7 @@
     font-size: 14px;
 }
 
-.loginButton:hover {
+.loginHeaderButton:hover {
     color: gray !important;
 }
 

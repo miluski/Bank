@@ -1,13 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-.leadContentDiv {
+.leadLoginContentDiv {
 	min-height: 70vh;
+	align-items: center;
+	justify-content: center;
 }
 
-.contentDiv {
+.loginContentDiv {
+	position: relative;
 	border-radius: 1em;
 	border: 0.2em solid transparent;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	margin: 1.5em 1.5em 1.5em 1.5em;
 	min-height: 75vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loginContentDiv::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://www.bezmapy.pl/wp-content/uploads/2020/05/adobestock_200046800-825x465.jpeg');
+	background-size: cover;
+	background-position: center;
+	opacity: 0.4;
+}
+
+.loginFormDiv {
+	border-radius: 1em;
+	border: 0.2em solid transparent;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	margin: 1.5em 1.5em 1.5em 1.5em;
+	min-height: 60vh;
+	min-width: 100vh;
+	background-color: #F6F1E9; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 1;
+}
+
+.loginButton {
+    background-color: #E4AB3B !important;
+    color: black !important;
+    align-self: center;
+    font-family: "Roboto";
+	font-weight: 300;
+	font-style: normal;
+    font-size: 14px;
+	margin-top: 5%;
+	min-width: 20vh;
+}
+
+.loginButton:hover {
+    color: gray !important;
+}
+
+.loginText {
+	font-family: "Roboto Flex";
+	font-size: 42px;
+	font-weight: 600;
+	margin: 5%;
+}
+
+.formItem .ant-form-item-label > label {
+	font-family: 'Roboto';
+	font-weight: 300; 
+	font-size: 20px; 
 }

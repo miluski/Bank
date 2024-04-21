@@ -41,8 +41,8 @@ const dashboardTabItems = [
 
 export default function GlobalTabs() {
 	const dispatch = useDispatch();
-	const location = useLocation();
 	const navigate = useNavigate();
+	const location = useLocation();
 	const { site } = useSelector((state: State) => state);
 	const path = location.pathname;
 	const tabItems = path === "/dashboard" ? dashboardTabItems : globalTabItems;
