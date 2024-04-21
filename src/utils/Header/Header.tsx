@@ -16,7 +16,6 @@ export default function HeaderView() {
 	const currentPath = location.pathname;
 	const { site } = useSelector((state: State) => state);
 	useEffect(() => {
-		console.log("rerender");
 	}, [site]);
 	return (
 		<Header className='header'>

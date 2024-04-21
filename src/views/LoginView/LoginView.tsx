@@ -3,11 +3,14 @@ import HeaderView from "../../utils/Header/Header";
 import FooterView from "../../utils/Footer/Footer";
 import "./styles/LoginViewStyles.css";
 import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
+import { CHANGE_SITE } from "../../utils/ActionTypes";
 
 const { Content } = Layout;
 
 export default function LoginView() {
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
 	return (
 		<Layout>
 			<HeaderView />
@@ -65,6 +68,7 @@ export default function LoginView() {
 								type='primary'
 								className='loginButton'
 								onClick={() => {
+									dispatch({ type: CHANGE_SITE, newSite: "my-account" });
 									navigate("/dashboard");
 								}}>
 								Zaloguj się

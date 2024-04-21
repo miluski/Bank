@@ -91,7 +91,7 @@
 	margin-top: 5%;
 }
 
-.mainTilesDiv {
+.mainChooseTilesDiv {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -100,7 +100,7 @@
 	height: 50vh;
 }
 
-.singleTile {
+.singleChooseTile {
     min-width: 20vh;
     min-height: 20vh;
     max-width: 20vh;

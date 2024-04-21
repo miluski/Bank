@@ -13,10 +13,10 @@ export default function ChooseAccountTypeView() {
 	return (
 		<>
 			<text className='loginText'>Wybór typu konta</text>
-			<div className='mainTilesDiv'>
+			<div className='mainChooseTilesDiv'>
 				{accountOfferTiles.map((tile: Tile, index: number) => (
 					<div
-						className='singleTile'
+						className='singleChooseTile'
 						key={index}
 						style={{
 							backgroundColor:
