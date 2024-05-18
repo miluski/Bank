@@ -1,0 +1,21 @@
+.changeAccountSettingsText {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 40px;
+    margin: 20px;
+}
+
+.line {
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.informationText {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 32px; 
+    color: #B56E19;
+    margin: 10px 0;
+}
