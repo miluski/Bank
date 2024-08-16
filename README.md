@@ -1,7 +1,7 @@
 
 # Bank
 
-An Fullstack web application which is an fivtive bank application. The functionalities implemented in this application are: opening a bank account, making transfers, setting up deposits, viewing transaction history and editing account data.
+An Fullstack web application which is an fictive bank application. The functionalities implemented in this application are: opening a bank account, making transfers, setting up deposits, viewing transaction history and editing account data.
 
 ## Tech Stack
 
