@@ -3,7 +3,11 @@
 
 An Fullstack web application which is an fivtive bank application. The functionalities implemented in this application are: opening a bank account, making transfers, setting up deposits, viewing transaction history and editing account data.
 
+## Tech Stack
 
+**Frontend:** React, Redux, AntDesign, TypeScript
+
+**Backend:** Node, Express, Moongose, TypeScript
 
 
 ## Installation
@@ -49,15 +53,6 @@ And from frontend directory run frontend part of application:
     npm run dev
 
 ```
-
-
-    
-## Tech Stack
-
-**Client:** React, Redux, AntDesign, TypeScript
-
-**Server:** Node, Express, Moongose, TypeScript
-
 
 ## Screenshots
 
